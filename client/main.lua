@@ -156,6 +156,7 @@ function OpenTaxiActionsMenu()
     'default', GetCurrentResourceName(), 'taxi_actions',
     {
       title    = 'Taxi',
+	  align    = 'bottom-right',
       elements = elements
     },
     function(data, menu)
@@ -184,7 +185,7 @@ function OpenTaxiActionsMenu()
               'default', GetCurrentResourceName(), 'vehicle_spawner',
               {
                 title    = _U('spawn_veh'),
-                align    = 'top-left',
+                align    = 'bottom-right',
                 elements = elements,
               },
               function(data, menu)
@@ -277,6 +278,7 @@ function OpenMobileTaxiActionsMenu()
     'default', GetCurrentResourceName(), 'mobile_taxi_actions',
     {
       title    = 'Taxi',
+	  align    = 'bottom-right',
       elements = {
         {label = _U('billing'), value = 'billing'}
       }
@@ -288,6 +290,7 @@ function OpenMobileTaxiActionsMenu()
         ESX.UI.Menu.Open(
           'dialog', GetCurrentResourceName(), 'billing',
           {
+			align = 'bottom-right',
             title = _U('invoice_amount')
           },
           function(data, menu)
@@ -342,6 +345,7 @@ function OpenGetStocksMenu()
       'default', GetCurrentResourceName(), 'stocks_menu',
       {
         title    = 'Taxi Stock',
+		align    = 'bottom-right',
         elements = elements
       },
       function(data, menu)
@@ -351,7 +355,8 @@ function OpenGetStocksMenu()
         ESX.UI.Menu.Open(
           'dialog', GetCurrentResourceName(), 'stocks_menu_get_item_count',
           {
-            title = _U('quantity')
+            title = _U('quantity'),
+			align = 'bottom-right'
           },
           function(data2, menu2)
 
@@ -403,6 +408,7 @@ function OpenPutStocksMenu()
       'default', GetCurrentResourceName(), 'stocks_menu',
       {
         title    = _U('inventory'),
+		align    = 'bottom-right',
         elements = elements
       },
       function(data, menu)
@@ -412,7 +418,8 @@ function OpenPutStocksMenu()
         ESX.UI.Menu.Open(
           'dialog', GetCurrentResourceName(), 'stocks_menu_put_item_count',
           {
-            title = _U('quantity')
+            title = _U('quantity'),
+			align = 'bottom-right'
           },
           function(data2, menu2)
 
