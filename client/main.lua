@@ -837,7 +837,7 @@ Citizen.CreateThread(function()
       GUI.Time = GetGameTimer()
     end
 
-    if IsControlPressed(0,  Keys['DELETE']) and (GetGameTimer() - GUI.Time) > 150 then
+    if IsControlPressed(0,  Keys['G']) and (GetGameTimer() - GUI.Time) > 150 then
 
       if OnJob then
         StopTaxiJob()
